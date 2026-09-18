@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Player Portal | Gaming Tournament Portal</title>
+  <link rel="stylesheet" href="../../assets/css/main.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="page-header panel">
+      <div>
+        <h1 id="welcome-text"></h1>
+        <p id="role-text" class="muted"></p>
+      </div>
+      <nav class="page-links">
+        <a href="../../index.html">Home</a>
+        <a href="organizer.html">Organizer View</a>
+        <a href="spectator.html">Spectator View</a>
+        <button id="logout-btn" class="logout-btn" type="button">Logout</button>
+      </nav>
+    </header>
+
+    <section class="grid portal-grid">
+      <article class="panel">
+        <h3>Tournaments</h3>
+        <div id="tournament-list" class="stack"></div>
+      </article>
+
+      <article class="panel">
+        <h3>My Registrations & Schedule</h3>
+        <ul id="registration-list"></ul>
+      </article>
+
+      <article class="panel">
+        <h3>Create Team</h3>
+        <form id="team-form" class="stack">
+          <label>
+            Team Name
+            <input type="text" id="team-name" required />
+          </label>
+          <label>
+            Members (comma separated)
+            <input type="text" id="team-members" placeholder="Alex, Sam, Lee" required />
+          </label>
+          <button type="submit">Create Team</button>
+        </form>
+        <ul id="team-list"></ul>
+      </article>
+
+      <article class="panel">
+        <h3>Leaderboard</h3>
+        <table>
+          <thead>
+            <tr><th>Player / Team</th><th>Points</th></tr>
+          </thead>
+          <tbody id="leaderboard-body"></tbody>
+        </table>
+      </article>
+
+      <article class="panel">
+        <h3>Live Updates</h3>
+        <ul id="announcement-list"></ul>
+      </article>
+
+      <article class="panel">
+        <h3>Spectator Reactions</h3>
+        <div id="reaction-box" class="reaction-box"></div>
+      </article>
+    </section>
+  </main>
+
+  <script type="module" src="../../assets/js/portal/player.js"></script>
+</body>
+</html>

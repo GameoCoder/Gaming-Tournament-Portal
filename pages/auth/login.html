@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | Gaming Tournament Portal</title>
+  <link rel="stylesheet" href="../../assets/css/main.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="page-header">
+      <div>
+        <h1>Login</h1>
+        <p class="muted">Access your player, organizer, or spectator dashboard.</p>
+      </div>
+      <nav class="page-links">
+        <a href="../../index.html">Home</a>
+        <a href="signup.html">Create account</a>
+      </nav>
+    </header>
+
+    <section class="panel" style="max-width: 460px;">
+      <form id="login-form" class="stack">
+        <label>
+          Email
+          <input type="email" id="login-email" required />
+        </label>
+        <label>
+          Password
+          <input type="password" id="login-password" required />
+        </label>
+        <button type="submit">Login</button>
+      </form>
+      <p id="auth-message" class="message"></p>
+    </section>
+  </main>
+
+  <script type="module" src="../../assets/js/auth/login.js"></script>
+</body>
+</html>

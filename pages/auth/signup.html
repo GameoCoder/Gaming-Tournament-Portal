@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Signup | Gaming Tournament Portal</title>
+  <link rel="stylesheet" href="../../assets/css/main.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="page-header">
+      <div>
+        <h1>Signup</h1>
+        <p class="muted">Create your account and choose your role.</p>
+      </div>
+      <nav class="page-links">
+        <a href="../../index.html">Home</a>
+        <a href="login.html">Already registered?</a>
+      </nav>
+    </header>
+
+    <section class="panel" style="max-width: 520px;">
+      <form id="signup-form" class="stack">
+        <label>
+          Username
+          <input type="text" id="signup-username" required />
+        </label>
+        <label>
+          Email
+          <input type="email" id="signup-email" required />
+        </label>
+        <label>
+          Password
+          <input type="password" id="signup-password" minlength="6" required />
+        </label>
+        <label>
+          Role
+          <select id="signup-role">
+            <option value="player">Player</option>
+            <option value="organizer">Organizer</option>
+            <option value="spectator">Spectator</option>
+          </select>
+        </label>
+        <button type="submit">Create Account</button>
+      </form>
+      <p id="auth-message" class="message"></p>
+    </section>
+  </main>
+
+  <script type="module" src="../../assets/js/auth/signup.js"></script>
+</body>
+</html>
