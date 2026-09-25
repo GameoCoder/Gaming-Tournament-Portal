@@ -21,6 +21,19 @@ body {
   color: var(--text);
 }
 
+#bg-video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: 100%;
+  height: 100%;
+  z-index: -100;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
 a {
   color: var(--accent-2);
   text-decoration: none;
@@ -38,27 +51,48 @@ a:hover {
 ul {
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding: 0 14px;
   overflow: hidden;
-  background-color: #101a2a;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
   position: sticky;
   top: 0;
+  border-radius: 20px;
+  height: 60px;
+}
+
+ul .components {
+  display: flex;
+  align-items: center; 
+  height: 100%;
+  max-width: 100%;
+  gap: 20%;
 }
 
 ul li {
-  float: left;
+  list-style: none;
+}
+
+ul li .brand {
+  margin-left: auto;
 }
 
 ul li a {
   display: block;
-  color: #428dff;
+  color: #000000;
   text-align: center;
-  padding: 14px 14px;
+  padding: 10px 25px;
   text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  transition: all 0.2s ease;
 }
 
 ul li a:hover {
-  background-color: #111111;
+  background-color: rgba(255, 217, 0, 0.644);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  text-decoration: none;
 }
 
 ul li a:active {
@@ -69,6 +103,7 @@ ul li a:active {
   font-weight: 700;
   font-size: 1.2rem;
   color: var(--text);
+  color: #fa9a00;
 }
 
 .nav-links {
@@ -263,31 +298,31 @@ th, td {
 .card {
   display: flex;
   height: 70px;
-  width: 270px;
-  float: right;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 15px;
+  box-sizing: border-box;
 }
 
-.card svg {
-  position: absolute;
+.card p {
+  margin: 0;
+}
+
+.card .social-icons {
   display: flex;
-  width: 60%;
-  height: 100%;
-  font-size: 24px;
-  font-weight: 700;
-  opacity: 1;
-  transition: opacity 0.25s;
-  z-index: 2;
-  cursor: pointer;
+  align-items: center;
+  gap: 5px;
 }
 
-.card .social-link1,.card .social-link2,.card .social-link3,.card .social-link4 {
+.card .social-link1, .card .social-link2, .card .social-link3, .card .social-link4 {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 25%;
+  width: 35px;
+  height: 35px;
   color: whitesmoke;
-  font-size: 24px;
   text-decoration: none;
   transition: 0.25s;
   border-radius: 50px;
@@ -295,6 +330,12 @@ th, td {
 
 .card svg {
   transform: scale(0.5);
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  transition: opacity 0.25s;
+  opacity: 1;
+  z-index: 2;
 }
 
 .card .social-link1:hover {
